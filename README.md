@@ -98,4 +98,4 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
                 }
             });
 
-
+- If everything is set run `npm i && npm run dev`

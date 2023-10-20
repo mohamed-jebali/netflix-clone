@@ -1,0 +1,69 @@
+tabella utente:
+-NOME
+-COGNOME
+-EMAIL
+
+- (per l'iscrizione inserire il metodo di pagamento usare braintree)
+- (inserire tre piani di iscrizione basic,plus,premium,)
+
+tabella abbonamento:
+
+-PIANO_SCELTO // (per ogni piano stabilire una scadenza dell'abbonamento)
+-PREZZO_MENSILE
+-DATA_SCADENZA 
+
+tabella film:
+
+-NOME_FILM
+-CONTENUTO_FILM
+-AUTORI
+-ATTORI
+-DURATA
+-IN ARRIVO
+
+tabella serie tv:
+
+-NOME_SERIE
+-CONTENUTO_SERIE
+-AUTORI
+-ATTORI
+-STAGIONI
+-EPISODI
+-DURATA
+-IN ARRIVO
+
+tabella autori:
+
+-NOME
+-COGNOME
+-BIOGRAFIA
+-FILM_PRODOTTI
+-SERIE_PRODOTTI
+
+tabella attori:
+
+-NOME
+-COGNOME
+-BIOGRAFIA
+-FILM_RECITATO
+-SERIE_RECITATO
+
+tabella categorie:
+
+-NOME_CATEGORIA
+-DESCRIZIONE
+
+
+tabella visualizzazioni:
+
+-ID_UTENTE
+-CONTENUTO_VISUALIZZATO
+-DATA VISUALIAZZIONE
+-DISPOSITIVO_UTENTE
+
+tabella feedback_utente:
+
+-ID_UTENTE
+-COMMENTO
+-VOTO
+-DATA_FEEDBACK

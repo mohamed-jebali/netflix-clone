@@ -65,3 +65,37 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
     - run `npm run dev` to build iteratively our front-end packages and code
     - run `php artisan serve` to build iteratively our back-end packages and code
 - Start changing the world with your oustanding code!
+
+
+## Authentication Settings for Laravel UI
+
+- `composer require laravel/ui`
+
+- `php artisan ui bootstrap`
+
+- After running those two command check vite.config the code must be like this:
+  
+            const path = require('path');
+            import { defineConfig } from 'vite';
+            import laravel from 'laravel-vite-plugin';
+
+            export default defineConfig({
+                plugins: [
+                    laravel({
+                        input: [
+                            'resources/scss/app.scss',
+                            'resources/js/app.js',
+                        ],
+                        refresh: true,
+                    }),
+                    
+                ],
+                resolve: {
+                    alias: {
+                        '~resources' : '/resources/',
+                        '~bootstrap' : path.resolve(__dirname, 'node_modules/bootstrap'),
+                    }
+                }
+            });
+
+

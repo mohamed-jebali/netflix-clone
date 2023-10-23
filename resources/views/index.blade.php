@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Hello World')
+@section('title', 'Netflix')
 
 @section('main-content')
     <h1 class='text-center'>

@@ -1,1 +1,31 @@
 @import "~bootstrap/scss/bootstrap";
+
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import '../scss/partials/variables';
+
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+
+
+
+
+.header-app{
+
+    .full-logo{
+        height: 90px;
+    }
+
+    .mobile-logo{
+        height: 50px;
+    }
+
+.bg-netflix{
+    background-color: $blackNetflix;
+}
+
+}

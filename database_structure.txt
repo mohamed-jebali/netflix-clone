@@ -1,39 +1,49 @@
+// GESTIONE ADMIN
+
+
+tabella amministratore:
+
+-ID_ADMIN || BIGINT || UNSIGNED || NOT_NULL || AUTO_INCREMENT
+-NOME_ADMIN || VARCHAR(50) || NOT_NULL 
+-COGNOME_ADMIN || VARCHAR(50) || NOT_NULL 
+-EMAIL || VARCHAR(255) || NOT_NULL 
+-PASSWORD || VARCHAR(255) || NOT_NULL
+
+tabella caricamenti_admin:
+
+-ID_CARICAMENTO || BIGINT || UNSIGNED || NOT_NULL || AUTO_INCREMENT
+-NOME_CONTENUTO || VARCHAR(50) || NOT_NULL 
+-CONTENUTO_CARICATO || VARCHAR(255) || NOT_NULL
+-DATA_CARICAMENTO || CREATED_AT || UPTADED_AT || NULL
+-CATEGORIE || VARCHAR(50) || NOT_NULL
+-AUTORI || VARCHAR(50) || NOT_NULL
+-ATTORI || VARCHAR(50) || NOT_NULL
+-IN_ARRIVO || BOOLEAN || NOT_NULL
+-DURATA || SMALLINT || NOT_NULL
+
+
+// GESTIONE UTENTE
+
 tabella utente:
+-ID_UTENTE
 -NOME
 -COGNOME
 -EMAIL
+-PASSWORD
 
 - (per l'iscrizione inserire il metodo di pagamento usare braintree)
 - (inserire tre piani di iscrizione basic,plus,premium,)
 
 tabella abbonamento:
 
+-ID_UTENTE
 -PIANO_SCELTO // (per ogni piano stabilire una scadenza dell'abbonamento)
 -PREZZO_MENSILE
 -DATA_SCADENZA 
 
-tabella film:
-
--NOME_FILM
--CONTENUTO_FILM
--AUTORI
--ATTORI
--DURATA
--IN ARRIVO
-
-tabella serie tv:
-
--NOME_SERIE
--CONTENUTO_SERIE
--AUTORI
--ATTORI
--STAGIONI
--EPISODI
--DURATA
--IN ARRIVO
-
 tabella autori:
 
+-ID_AUTORE
 -NOME
 -COGNOME
 -BIOGRAFIA
@@ -42,6 +52,7 @@ tabella autori:
 
 tabella attori:
 
+-ID_ATTORE
 -NOME
 -COGNOME
 -BIOGRAFIA
@@ -50,6 +61,7 @@ tabella attori:
 
 tabella categorie:
 
+-ID_CATEGORIE
 -NOME_CATEGORIA
 -DESCRIZIONE
 
@@ -67,3 +79,6 @@ tabella feedback_utente:
 -COMMENTO
 -VOTO
 -DATA_FEEDBACK
+
+
+RELAZIONI TABELLE LINK FIGMA: https://www.figma.com/file/yen23yVKGm0kcNSOzQntDe/database-netflix-clone?type=whiteboard&node-id=0-1&t=2Yt5eBN4fvpMBQ8V-0

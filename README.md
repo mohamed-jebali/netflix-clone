@@ -99,3 +99,5 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
             });
 
 - If everything is set run `npm i && npm run dev`
+
+- otherwise check stackoverflow link here: https://stackoverflow.com/questions/66188968/how-to-properly-start-laravel-8-with-bootstrap-authentication

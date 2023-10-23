@@ -67,15 +67,14 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
 - Start changing the world with your oustanding code!
 
 
-## Authentication Settings for Laravel UI
+## Authentication Settings for Laravel UI 
 
-- `composer require laravel/ui`
+- `composer require laravel/ui` // Install the needed package
 
-- `php artisan ui bootstrap`
+- `php artisan ui bootstrap --auth` // Apply the new auth scaffolding using bootstrap and laravel/ui:
 
 - After running those two command check vite.config the code must be like this:
-  
-            const path = require('path');
+            
             import { defineConfig } from 'vite';
             import laravel from 'laravel-vite-plugin';
 
@@ -88,16 +87,14 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
                         ],
                         refresh: true,
                     }),
-                    
                 ],
                 resolve: {
                     alias: {
                         '~resources' : '/resources/',
-                        '~bootstrap' : path.resolve(__dirname, 'node_modules/bootstrap'),
                     }
                 }
             });
 
 - If everything is set run `npm i && npm run dev`
 
-- otherwise check stackoverflow link here: https://stackoverflow.com/questions/66188968/how-to-properly-start-laravel-8-with-bootstrap-authentication
+- otherwise check stackoverflow link here: https://stackoverflow.com/questions/66188968/how-to-properly-start-laravel-8-with-bootstrap-authentication OR https://github.com/rc2pc2/laravel-boolpress-10

@@ -25,11 +25,11 @@ tabella caricamenti_admin:
 // GESTIONE UTENTE
 
 tabella utente:
--ID_UTENTE
--NOME
--COGNOME
--EMAIL
--PASSWORD
+-ID_UTENTE || BIGINT || UNSIGNED || NOT_NULL || AUTO_INCREMENT
+-NOME || VARCHAR(50) || NOT_NULL 
+-COGNOME | VARCHAR(50) || NOT_NULL 
+-EMAIL || VARCHAR(255) || NOT_NULL 
+-PASSWORD || VARCHAR(255) || NOT_NULL
 
 - (per l'iscrizione inserire il metodo di pagamento usare braintree)
 - (inserire tre piani di iscrizione basic,plus,premium,)

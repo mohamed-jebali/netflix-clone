@@ -163,8 +163,10 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'surname' => [
+            'required' => 'Il campo nome è obbligatorio.',
+            'max' => 'Il campo nome non può superare :max caratteri.',
+            'string' => 'Il campo deve essere testo'
         ],
     ],
 

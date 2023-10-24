@@ -73,6 +73,8 @@ Template to generate a new standard and simple project using Laravel 9.2, Bootst
 
 - `php artisan ui bootstrap --auth` // Apply the new auth scaffolding using bootstrap and laravel/ui:
 
+- documentation link: https://laravel.com/docs/10.x/starter-kits#laravel-breeze
+
 - After running those two command check vite.config the code must be like this:
             
             import { defineConfig } from 'vite';

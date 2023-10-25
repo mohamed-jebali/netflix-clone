@@ -14,6 +14,10 @@ class Admin extends Authenticatable
 
     protected $table = 'admins';
 
+    public function adminUploads(){
+        return $this->hasMany(AdminUpload::class);
+    }
+
 
     /**
      * The attributes that are mass assignable.

@@ -17,8 +17,8 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-netflix shadow-sm">
+    <div id="app" class="bg-login">
+        <nav class="navbar navbar-expand-md navbar-transparent shadow-sm">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" class="d-none d-md-block align-text-top full-logo">

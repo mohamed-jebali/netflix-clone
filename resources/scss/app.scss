@@ -9,12 +9,14 @@
 @import 'bootstrap/scss/bootstrap';
 
 
+
+
 .navbar{
     height: 90px;
 }
 
     .full-logo{
-        height: 90px;
+        height: 140px;
     }
 
     .mobile-logo{
@@ -25,6 +27,88 @@
     background-color: $blackNetflix;
 }
 
+.navbar-transparent {
+    background-color: transparent;
+    box-shadow: none;
+    
+}
+
+
+
+// LOGIN SECTION
+
+
+#email,#password{
+    background-color: #333333;
+    color: $whiteNetflix;
+    border: none;  
+}
+
+#email::placeholder,#password::placeholder{
+    color: #777777;
+}
+
+
+
+.size-button-login{
+    width: 100%;
+}
+
+
+.bg-login {
+    position: relative;
+    height: 100vh;
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/8f47696b-edbd-41f9-9e6f-450e36eafbd9/IT-it-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-login::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.bg-layer-black{
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+}
+
+.bg-form{
+    background-color: $formNetflixBg;
+}
+
+.button-netflix{
+    background-color: $darkRedNetflix;
+    color: $whiteNetflix;
+    padding: 0.8rem;
+
+    &:hover{
+        transition: ease-out 0.5s;
+        background-color: red;
+        color: $whiteNetflix;
+    }
+}
+
+.card-header{
+    font-size: 2rem;
+    color: $whiteNetflix;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-bottom: none;
+    opacity: calc(0.95);
+    border-radius: 4rem;
+}
+
+.card-login{
+    background-color: rgba(0,0,0, 0.7);
+    color: #b0b0b0;
+}
 
 
 

@@ -8,7 +8,7 @@
         <div class="row">
 
         <!-- SIDEBAR -->
-            <div class="col-2 sidebar bg-primary">
+            <div class="col-2 sidebar bg-primary">`
                 sidebar
             </div>
 

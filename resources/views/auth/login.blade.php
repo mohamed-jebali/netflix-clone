@@ -1,11 +1,22 @@
 @extends('layouts.app')
 
+
 @section('content')
-<div class="container">
+<div class="container-fluid login-section bg-login">
+
+<nav class="navbar navbar-expand-md navbar-transparent">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{{ url('/') }}">
+                <img src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" class="align-text-top full-logo">
+                </a>
+            </div>
+        </nav>
+
+
     <div class="row justify-content-center">
-        <div class="col-md-4 mt-4">
-            <div class="card bg-transparent">
-                <div class="card-header ps-5">{{ __('Accedi') }}</div>
+        <div class="col-md-4 card-wrapper mt-2">
+            <div class="card">
+                <div class="card-header">{{ __('Accedi') }}</div>
 
                 <div class="card-body card-login">
                     <form method="POST" action="{{ route('login') }}">
@@ -13,8 +24,12 @@
 
                         <div class="row mb-3 justify-content-center">
 
-                            <div class="col-md-10">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror p-3" name="email" value="{{ old('email') }}" placeholder="Email" required autocomplete="email" autofocus>
+                            <div class="col-md-11">
+                                <div class="form-container">
+                                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror p-3" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    <label for="email">Email</label>
+                                </div>
+                               
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -26,8 +41,12 @@
 
                         <div class="row mb-5 justify-content-center">
 
-                            <div class="col-md-10">
-                                <input id="password" type="password" class="form-control bg-form @error('password') is-invalid @enderror p-3" name="password" required autocomplete="current-password" placeholder="Password">
+                            <div class="col-md-11">
+                                <div class="form-container">
+                                <input id="password" type="password" class="form-control bg-form @error('password') is-invalid @enderror p-3" name="password" required autocomplete="current-password">
+                                <label for="password">Password</label>
+                                </div>
+                                
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -38,7 +57,7 @@
                         </div>
 
                         <div class="row mb-3 justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-md-11">
                                 <button type="submit" class="btn button-netflix size-button-login">
                                     {{ __('Accedi') }}
                                 </button>
@@ -46,7 +65,7 @@
                         </div>
 
                         <div class="row mb-5 justify-content-center">
-                            <div class="col-md-10">
+                            <div class="col-md-11">
                                 <div class="form-check d-flex justify-content-between">
                                     <div>
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -65,17 +84,17 @@
 
 
                         <div class="row justify-content-center mb-3">
-                            <div class="col-md-10">
+                            <div class="col-md-11">
                             @if (Route::has('register'))
                                 <li class="nav-item" style="list-style-type: none; padding:0;">
-                                    <a class="nav-link" href="{{ route('register') }}">Prima Volta su Netflix? {{ __('Registrati') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('register') }}"> <span class="card-login">Prima Volta su Netflix? </span> {{ __('Registrati') }}</a>
                                 </li>
                             @endif
                             </div>
                         </div>
 
                         <div class="row justify-content-center pb-5">
-                            <div class="col-md-10">
+                            <div class="col-md-11">
                             @if (Route::has('password.request'))
                                     <a class="btn btn-link text-decoration-none" href="{{ route('password.request') }}" style="padding:0;">
                                         {{ __('Hai Dimenticato la Password?') }}

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\Admin\AdminController as AdminController;
+use App\http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,13 +15,11 @@ use App\http\Controllers\Admin\AdminController as AdminController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('home');
 });
 
 Auth::routes();
 
-Route::get('admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'dashboard'])->middleware('auth')->name('admin.dashboard');
+Route::get('admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->middleware('auth')->name('admin.dashboard');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

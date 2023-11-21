@@ -175,20 +175,16 @@
 
 
 .dashboard-wrapper{
-    background-color: $whiteNetflix;
-
-    // SIDEBAR
-
-    .sidebar{
-        height: calc(100vh - 90px);
-    }
-
 
     // DASHBOARD CONTENT
-    
-    .dashboard-content{
-        height: calc(100vh - 90px);
+    background-color: #333333;
+
+
+    .box-preview{
+        height: 130px;
+        border: 2px solid #333333;
     }
+
 }
 
 // REGISTER SECTION

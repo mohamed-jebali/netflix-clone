@@ -5,12 +5,12 @@
 <div class="container-fluid login-section bg-login">
 
 <nav class="navbar navbar-expand-md navbar-transparent">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" class="align-text-top full-logo">
-                </a>
-            </div>
-        </nav>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url('/') }}">
+        <img src="https://www.logo.wine/a/logo/Netflix/Netflix-Logo.wine.svg" class="align-text-top full-logo">
+        </a>
+    </div>
+</nav>
 
 
     <div class="row justify-content-center">

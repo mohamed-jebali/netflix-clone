@@ -46,36 +46,43 @@
 
         @section('content')
 
+        <div class="container create-container">
+            <div class="row justify-content-center mb-4">
+                <div class="col-12 col-md-8 col-lg-5">
+                     <form action="{{ route('admin.store') }}" method="POST" class="form">
+                       @csrf
 
+                            <p id="heading">Create New Content</p>
 
-        <!-- DASHBOARD-CONTENT -->
-        <div class="dashboard-wrapper">
-            <div class="container">
-                <div class="row justify-content-between pt-5">
-                    <h1 class="text-center text-white mb-4">
-                        Contenuti Caricati
-                    </h1>
+                            @if($errors->any())
+                                    <div class="alert alert-danger">
+                                        {{ $errors->first() }}
+                                    </div>
+                            @endif
 
-                    @if(session ('delete'))
-                        <div class="col-12 col-md-10 col-lg-11 alert alert-warning">
-                            Il Contenuto {{ session('delete') }}  è stato eliminato
-                        </div>
-                    @elseif(session('update'))
-                        <div class="col-12 col-md-10 col-lg-11 alert alert-primary">
-                            Il Contenuto {{ session('update') }}   è stato aggiornato
-                        </div>
-                    @elseif(session('created'))
-                        <div class="col-12 col-md-10 col-lg-11 alert alert-success">
-                            Il Contenuto {{ session('created') }}  è stato creato con successo
-                        </div>
-                    @endif
+                            <div class="field">
+                                <input autocomplete="off" placeholder="name_content" name="name_content" class="input-field" type="text">
+                            </div>
+                            <div class="field mb-2">
+                                <input placeholder="content_charged" name="content_charged" class="input-field" type="text">
+                            </div>
+                            <p class="text-white ps-2">Is This Content Arrived</p>
+                            <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                <input type="radio" class="btn-check" name="is_arrived" id="yes" value="1">
+                                <label class="btn btn-outline-danger" for="yes">Yes</label>
 
-                    @foreach($contents as $content)
-                    <div class="col-12 col-md-6 col-lg-2 bg-danger box-preview">
-                            {{ $content->name_content }}
-                        </div>
-                    @endforeach
-                <div>
+                                <input type="radio" class="btn-check" name="is_arrived" id="no" value="0">
+                                <label class="btn btn-outline-danger" for="no">No</label>
+                            </div>
+                            <div class="field">
+                                <input placeholder="duration" name="duration" class="input-field" type="number">
+                            </div>
+                            <div class="btn-wrapper">
+                                <button class="button-reset">Reset</button>
+                                <button type="submit" class="button-create">Create</button>
+                            </div>
+                        </form>
+                </div>
             </div>
         </div>
             

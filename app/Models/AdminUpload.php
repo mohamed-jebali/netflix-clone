@@ -18,6 +18,7 @@ class AdminUpload extends Model
 
     protected $fillable = [
         'name_content',
+        'admin_id',
         'content_charged',
         'is_arrived',
         'duration',

@@ -20,6 +20,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('admin/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->middleware('auth')->name('admin.dashboard');
+Route::middleware(['auth','verified'])->prefix("admin")->name("admin.")->group(function (){
+    Route::get('/dashboard', [App\Http\Controllers\Admin\AdminController::class, 'index'])->middleware('auth')->name('dashboard');
+    Route::get('/create', [App\Http\Controllers\Admin\AdminController::class, 'create'])->middleware('auth')->name('create');
+    Route::post('/store', [App\Http\Controllers\Admin\AdminController::class, 'store'])->middleware('auth')->name('store');
+});
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

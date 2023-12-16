@@ -154,12 +154,12 @@
         border-radius: 0.5rem;
         background-color: rgba(0,0,0, 0.7);
         font-size: 0.85rem;
-        height: 650px;
+        height: 580px;
     }
 
     @media (min-width:992px){
         .card{
-            padding: 1rem 2.5rem;
+            padding: 0.9rem 2.5rem;
         }
     }
     
@@ -274,4 +274,105 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
+}
+
+
+// CREATE CONTAINER
+
+.create-container{
+    .form {
+        margin-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 0.4em;
+        background-color: #171717;
+        border-radius: 25px;
+        transition: .4s ease-in-out;
+      }
+      
+      .form:hover {
+        transform: scale(1.05);
+        border: 1px solid black;
+      }
+      
+      #heading {
+        text-align: center;
+        margin: 2em;
+        color: rgb(255, 255, 255);
+        font-size: 1.2em;
+      }
+      
+      .field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        border-radius: 25px;
+        padding: 0.6em;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: #171717;
+        box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+      }
+      
+      .input-icon {
+        height: 1.3em;
+        width: 1.3em;
+        fill: white;
+      }
+      
+      .input-field {
+        background: none;
+        border: none;
+        outline: none;
+        width: 100%;
+        color: #d3d3d3;
+      }
+      
+      .form .btn-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 2.5em;
+      }
+      
+      .button-reset {
+        padding: 0.5em;
+        padding-left: 2.3em;
+        padding-right: 2.3em;
+        border-radius: 5px;
+        margin-right: 1rem;
+        height: 50px;
+        border: none;
+        outline: none;
+        transition: .4s ease-in-out;
+        background-color: #252525;
+        color: white;
+      }
+      
+      .button-reset:hover {
+        background-color: black;
+        color: white;
+      }
+      
+      .button-create {
+        height: 50px;
+        margin-bottom: 3em;
+        padding: 0.5em 2.3rem;
+        border-radius: 5px;
+        border: none;
+        outline: none;
+        transition: .4s ease-in-out;
+        background-color: #252525;
+        color: white;
+      }
+      
+      .button-create:hover {
+        background-color: red;
+        color: white;
+      }
 }

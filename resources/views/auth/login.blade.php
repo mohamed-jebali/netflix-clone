@@ -26,15 +26,15 @@
 
                             <div class="col-md-11">
                                 <div class="form-container">
+
                                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror p-3" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
                                     <label for="email">Email</label>
                                 </div>
-                               
 
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
+                                        <span class="invalid-feedback mt-2 d-block" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                 @enderror
                             </div>
                         </div>
@@ -49,7 +49,7 @@
                                 
 
                                 @error('password')
-                                    <span class="invalid-feedback" role="alert">
+                                    <span class="invalid-feedback mt-2 d-block" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

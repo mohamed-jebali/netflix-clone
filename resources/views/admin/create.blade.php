@@ -66,6 +66,9 @@
                             <div class="field mb-2">
                                 <input placeholder="content_charged" name="content_charged" class="input-field" type="text">
                             </div>
+                            <div class="field mb-2">
+                                <input placeholder="image_charged" name="image_charged" class="input-field" type="text">
+                            </div>
                             <p class="text-white ps-2">Is This Content Arrived</p>
                             <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
                                 <input type="radio" class="btn-check" name="is_arrived" id="yes" value="1">

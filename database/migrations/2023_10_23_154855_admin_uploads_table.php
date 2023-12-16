@@ -24,6 +24,7 @@ return new class extends Migration
 
             $table->string('name_content', 50);
             $table->string('content_charged', 255);
+            $table->text('content_image')->nullable();
             $table->boolean('is_arrived')->default(false);
             $table->smallInteger('duration');
             $table->timestamps();

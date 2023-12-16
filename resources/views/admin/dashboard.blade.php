@@ -69,13 +69,32 @@
                             Il Contenuto {{ session('created') }}  è stato creato con successo
                         </div>
                     @endif
+                <div>
 
+                <div class="row justify-content-center mb-5">
                     @foreach($contents as $content)
-                    <div class="col-12 col-md-6 col-lg-2 bg-danger box-preview">
-                            {{ $content->name_content }}
+                        <div class="col-12 col-md-6 col-lg-2 box-preview">
+                            <img class="box-content" style="height:100%; width:100%;" src="{{ $content->content_image }}" alt="name_content">
+                            <h4 class="text-white">
+                                {{ $content->name_content }}
+                            </h4>
+                            <p class="text-white">
+                                {{ $content->content_charged }}
+                            </p>
                         </div>
                     @endforeach
-                <div>
+                </div>
+
+
+                <div class="row justify-content-center">
+                        <div class="col-12 col-md-5">
+                            <button class="button-netflix">
+                                <a class="text-white text-decoration-none" href="{{ route('admin.create') }}">
+                                    Aggiungi
+                                </a>
+                            </button>
+                        </div>
+                </div>
             </div>
         </div>
             

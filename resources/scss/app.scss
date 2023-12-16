@@ -176,13 +176,35 @@
 
 .dashboard-wrapper{
 
+    height: 100vh;
+
     // DASHBOARD CONTENT
     background-color: #333333;
 
+        
+    .button-netflix{
+        background-color: $darkRedNetflix;
+        color: $whiteNetflix;
+        padding: 0.8rem;
+        border: none;
+    
+        &:hover{
+            transition: ease-out 0.5s;
+            background-color: red;
+            color: $whiteNetflix;
+        }
+    }
+
 
     .box-preview{
-        height: 130px;
+        height: 150px;
+        width: 250px;
         border: 2px solid #333333;
+    }
+
+    .box-content{
+        object-fit: cover;
+        object-position: center;
     }
 
 }
